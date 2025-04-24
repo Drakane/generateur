@@ -4,7 +4,8 @@
     box-sizing: border-box;
 
 
-}
+    }
+
 
 ::selection{
     background: #0040ff;
@@ -19,15 +20,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-attachment: #fff;
+    background-attachment: #ff0000;
     height: 100vh; 
+    color: #FFD700;
 }
 .inputBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: #FFD700;
 }
 
 h2{
@@ -36,16 +38,28 @@ h2{
     font-weight: 400;
     text-align: center;
     padding: 10px 0; 
-    border-bottom: #ccc 1px solid;
+    border-bottom: #000000 1px solid;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
+
+.p{
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0; 
+    border-bottom: #FFD700 1px solid;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
 
 .pasword{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: #FFD700;
     padding: 10px 0; 
     border-bottom: #ccc 1px solid;
     margin-bottom: 10px;
@@ -61,4 +75,53 @@ h2{
     border-bottom: #ccc 1px solid;
     margin-bottom: 10px;
     letter-spacing: 1px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(65deg, rgb(0, 0, 0), rgb(150, 65, 0));
+    border: 2px solid transparent;
+    border-radius: 10px;
+    animation: borderGlow 2s infinite;
+}
+
+@keyframes borderGlow {
+    0% {
+        border-color: #FFD700;
+        box-shadow: 0 0 10px #FFD700;
+    }
+    50% {
+        border-color: #FFD700;
+        box-shadow: 0 0 20px #FFD700;
+    }
+    100% {
+        border-color: #FFD700;
+        box-shadow: 0 0 10px #FFD700;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .inputBox {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    h2, .p, .pasword, .option {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .pasword, .option {
+        flex-direction: column;
+        text-align: center;
+    }
 }
