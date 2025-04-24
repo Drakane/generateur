@@ -42,7 +42,5 @@ function getPassword() {
     passwordField.value = password;
 
     
-    if (password.length >= 12) {
-        copyBtn.style.display = "block";
-    }
+   
 }
