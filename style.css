@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+::selection{
+    background: #0040ff;
+    color: #000;
+}
+
+body{
+    background: linear-gradient(335deg, rgb(0, 0, 0), rgb(150, 65, 0));
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: #fff;
+    height: 100vh; 
+}
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+h2{
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0; 
+    border-bottom: #ccc 1px solid;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.pasword{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 10px 0; 
+    border-bottom: #ccc 1px solid;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e12b2b;
+    padding: 10px 0; 
+    border-bottom: #ccc 1px solid;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
