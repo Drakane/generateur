@@ -40,7 +40,4 @@ function getPassword() {
     
     let passwordField = document.getElementById("password");
     passwordField.value = password;
-
-    
-   
 }
