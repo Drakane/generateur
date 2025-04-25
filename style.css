@@ -6,12 +6,6 @@
 
     }
 
-
-::selection{
-    background: #0040ff;
-    color: #000;
-}
-
 body{
     background: linear-gradient(335deg, rgb(0, 0, 0), rgb(150, 65, 0));
     font-family: Arial, sans-serif;
@@ -82,7 +76,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(65deg, rgb(0, 0, 0), rgb(150, 65, 0));
+    background: linear-gradient(19deg, rgb(0, 0, 0), rgb(150, 65, 0));
     border: 2px solid transparent;
     border-radius: 10px;
     animation: borderGlow 2s infinite;
@@ -90,7 +84,7 @@ h2{
 
 @keyframes borderGlow {
     0% {
-        border-color: #FFD700;
+        border-color:#FFD700;
         box-shadow: 0 0 10px #FFD700;
     }
     50% {
@@ -124,4 +118,52 @@ h2{
         flex-direction: column;
         text-align: center;
     }
+}
+
+
+#generatePassword {
+    background-color: #FFD700; 
+    width: 100%;
+    margin: 10px 0;
+    color: white; 
+    border: none; 
+    padding: 9px 0px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 90px; 
+}
+
+#generatePassword:hover {
+    background-color: #ff0000; 
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+.generate-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    background: #FFD700;
+    border: 2px solid #000;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.generate-btn:hover {
+    background: #e6b800;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 10px #FFD700;
 }
