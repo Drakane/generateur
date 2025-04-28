@@ -98,7 +98,7 @@ h2{
 }
 
 .savedPasswords h2 {
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     font-size: 18px;
     text-align: center;
 }
@@ -109,8 +109,8 @@ h2{
 }
 
 .savedPasswords li {
-    margin: 5px 0;
-    font-size: 16px;
+    margin: 2px 0;
+    font-size: 19px;
     word-wrap: break-word;
 }
 
