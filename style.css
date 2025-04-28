@@ -86,6 +86,34 @@ h2{
     animation: borderGlow 2s infinite;
 }
 
+.savedPasswords {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    background-color: #000;
+    color: #FFD700;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.savedPasswords h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.savedPasswords ul {
+    list-style: none;
+    padding: 0;
+}
+
+.savedPasswords li {
+    margin: 5px 0;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
 @keyframes borderGlow {
     0% {
         border-color:#FFD700;

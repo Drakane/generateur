@@ -1,43 +1,43 @@
 let copyBtn = document.getElementById("copy");
 
+function savePassword(password) {
+    const passwordList = document.getElementById("passwordList");
+    const listItem = document.createElement("li");
+    listItem.textContent = password;
+    passwordList.appendChild(listItem);
+}
+
 function getPassword() {
-    
-    let includeLowercase = document.getElementById("includeLowercase").checked;
-    let includeUppercase = document.getElementById("includeUppercase").checked;
-    let includeNumbers = document.getElementById("includeNumbers").checked;
-    let includeSymbols = document.getElementById("includeSymbols").checked;
+    const passwordLength = document.getElementById("passwordLength").value;
+    const includeLowercase = document.getElementById("includeLowercase").checked;
+    const includeUppercase = document.getElementById("includeUppercase").checked;
+    const includeNumbers = document.getElementById("includeNumbers").checked;
+    const includeSymbols = document.getElementById("includeSymbols").checked;
 
-    
-    let lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-    let uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let numberChars = "0123456789";
-    let symbolChars = "!@#$%^&*()_+[]{}|;:,.<>?";
+    const password = generatePassword(passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSymbols);
+    document.getElementById("password").value = password;
 
-    
-    let chars = "";
-    if (includeLowercase) chars += lowercaseChars;
-    if (includeUppercase) chars += uppercaseChars;
-    if (includeNumbers) chars += numberChars;
-    if (includeSymbols) chars += symbolChars;
+    savePassword(password); // Ajoute le mot de passe au cadre
+}
 
-    
-    if (chars === "") {
-        alert("Veuillez sélectionner au moins un type de caractère.");
-        return;
-    }
+function generatePassword(length, lowercase, uppercase, numbers, symbols) {
+    const lowerChars = "abcdefghijklmnopqrstuvwxyz";
+    const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numberChars = "0123456789";
+    const symbolChars = "!@#$%^&*()_+[]{}|;:,.<>?";
+    let allChars = "";
 
-    
-    let passwordLengthInput = document.getElementById("passwordLength").value; 
-    let passwordLength = Math.max(12, Math.min(128, parseInt(passwordLengthInput)));
+    if (lowercase) allChars += lowerChars;
+    if (uppercase) allChars += upperChars;
+    if (numbers) allChars += numberChars;
+    if (symbols) allChars += symbolChars;
 
-    
+    if (allChars === "") return "";
+
     let password = "";
-    for (let i = 0; i < passwordLength; i++) {
-        let randomNumber = Math.floor(Math.random() * chars.length);
-        password += chars[randomNumber];
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * allChars.length);
+        password += allChars[randomIndex];
     }
-
-    
-    let passwordField = document.getElementById("password");
-    passwordField.value = password;
+    return password;
 }
