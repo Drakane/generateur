@@ -16,8 +16,6 @@ function getPassword() {
 
     const password = generatePassword(passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSymbols);
     document.getElementById("password").value = password;
-
-    savePassword(password); 
     
 }
 
